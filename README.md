@@ -1,13 +1,12 @@
 # mtk-assets
 
-MTK Download Agent binaries and Penumbra payloads for
-[ALEJA Tool](https://github.com/lazaro-jesus/aleja-tool).
+MTK Download Agent binaries and Penumbra extension payloads.
 
-These files are **not** committed to the tool repo. `build.rs` in aleja-tool
-downloads them once, on the first build, from this repo (raw.githubusercontent.com)
-with SHA-256 verification, into `assets/mtk-da/` (gitignored) — the same pattern
-as `assets/platform-tools/`. The tool then loads them from disk at runtime
-(`load_from_file`); it never downloads them by itself.
+These files are downloaded once, at compile time, from this repository
+(raw.githubusercontent.com) with SHA-256 verification, into a local
+`assets/mtk-da/` folder (gitignored) — the same pattern as platform-tools
+assets. They are then loaded from disk at runtime (`load_from_file`); they
+are never downloaded by the tool itself.
 
 ## Layout
 
